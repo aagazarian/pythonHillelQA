@@ -26,3 +26,18 @@ with open("test/data/tuple.txt", "r") as file:
 
         print(f"Line {count}: {result}")
         count += 1
+
+# Not bad but it could be solved in more elegant way
+# import pickle
+#
+# with open('test/data/text.txt', "rb") as file:
+#     operations = pickle.load(file)
+#
+#     for operation in operations:
+#         left, right, operator = operation
+#         if operator == 1:
+#             print(f"{left} + {right} = {left + right}")
+#         elif operator == 2:
+#             print(f"{left} * {right} = {left * right}")
+#         else:
+#             print(f"{left} / {right} = {left / right}")
