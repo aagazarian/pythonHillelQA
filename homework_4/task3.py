@@ -15,3 +15,13 @@ for element in first:
         # dict([final])
 
 print(dict(final_list))
+
+# Good. But take a look how it could be solved easier
+# result = dict()
+#
+# for pair in some_string.strip().split('&'):
+#     if pair:
+#         key, value = pair.split('=', maxsplit=1)
+#         result[key] = value
+#
+# print(result)

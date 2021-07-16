@@ -5,3 +5,8 @@ text = """Многие думают, что Lorem Ipsum - взятый с пот
 Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32!"""
 new_text = re.split(r'(?<=\.|\!|\?)\s', text)
 print(new_text)
+
+# Good. As alternative soloution could be solved with findall
+# for sentence in re.findall(r"[А-Я].*?[.!?](?=\s|$)", text):
+#     print(sentence)
+#     print()
