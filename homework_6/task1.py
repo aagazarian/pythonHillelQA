@@ -1,14 +1,18 @@
 def multiplication(a: int, b: int) -> int:
     return a * b
 
+
 def sum(a: int, b: int) -> int:
     return a + b
+
 
 def deduct(a: int, b: int) -> int:
     return a - b
 
+
 def division(a: int, b: int) -> float:
     return a / b
+
 
 def arithmetic(left_operand: int, right_operand: int, operation: str):
     """
@@ -52,3 +56,6 @@ if __name__ == "__main__":
         arithmetic(1, right_operand=2, operation="+")
     except TypeError as e:
         assert e.__class__ is TypeError
+
+# Good. But creation of function with one line which is not a callback useless
+# in my opinion
