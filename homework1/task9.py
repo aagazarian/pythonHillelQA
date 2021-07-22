@@ -5,7 +5,7 @@ peter = {
     "full_name": "Peter Ivanov",
     "age": 20, "salary": 200,
     "gender": True,
-    "friends": task6.names,
+    "friends": task6.name,
     "coordinates": coordinates_john
 }
 # Good but friends of peter also could be dicts
@@ -14,7 +14,7 @@ simon = {
     "full_name": "Simon Ivanov",
     "age": 20, "salary": 200,
     "gender": True,
-    "friends": task6.names,
+    "friends": task6.name,
     "coordinates": coordinates_john
 }
 # Good but friends of simon also could be dicts
@@ -23,7 +23,7 @@ alex = {
     "full_name": "Alex Ivanov",
     "age": 20, "salary": 200,
     "gender": True,
-    "friends": task6.names,
+    "friends": task6.name,
     "coordinates": coordinates_marta
 }
 # Good but friends of alex also could be dicts
@@ -33,7 +33,7 @@ grek = {
     "age": 20,
     "salary": 200,
     "gender": True,
-    "friends": task6.names,
+    "friends": task6.name,
     "coordinates": coordinates_marta
 }
 # Good but friends of grek also could be dicts
