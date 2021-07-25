@@ -37,9 +37,8 @@ def function_sqr_generator():
 if __name__ == "__main__":
     my_iter = function_sqr_generator()
 
-    while True:
-        try:
-            print(next(my_iter))
-        except StopIteration:
-            print("End of iteration")
-            break
+    print(next(my_iter))
+    print(next(my_iter))
+    print(next(my_iter))
+    print(next(my_iter))
+# Good.
