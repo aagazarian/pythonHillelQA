@@ -44,3 +44,5 @@ if __name__ == "__main__":
     print(custom_filter(lambda x: x > 5, my_tuple))
     print(custom_filter(lambda item: item["age"] > 24, my_dict))
     print(custom_filter(lambda item: item["name"].startswith("J"), my_dict))
+
+# Pretty good. Good job.
