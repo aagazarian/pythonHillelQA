@@ -16,5 +16,5 @@ def multiply(a: int, b: int) -> int:
 
 
 if __name__ == "__main__":
-    print(custom_sum(2, 3))
+    print(custom_sum(2, 3) + 2)
     print(multiply(3, 5))

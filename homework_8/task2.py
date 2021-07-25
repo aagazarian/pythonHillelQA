@@ -20,3 +20,8 @@ def num_sqr_gen():
 
 if __name__ == "__main__":
     num_sqr_gen()
+# not bad. But this decorator brakes generator. In best scenario
+# I will use this decorator to gen value. But decorator is blocking function
+# in same time generator just sleep after yiel. So this hum_sqr_gen start to
+# be useless after wrapping in decorator.
+# -5 points
