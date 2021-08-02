@@ -144,3 +144,9 @@ if __name__ == '__main__':
     employee_1.position = "QA"
     employee_1.salary = 5000.550
     print(employee_1.get_full_info())
+ # Well done but I suggest to remove setters from this class since you are
+    # not sure is it needed to modificate separate field like name from global
+    # scope
+    # -1 point
+# And I want to see some logic in this class for modification of state like in company class
+#  -1 point
