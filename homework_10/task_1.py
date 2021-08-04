@@ -136,3 +136,8 @@ if __name__ == '__main__':
 
     print("\nToshiba:")
     print(toshiba.get_company_info())
+
+    # Well done but I suggest to remove setters from this class since you are
+    # not sure is it needed to modificate separate field like name from global
+    # scope
+    # -1 point
