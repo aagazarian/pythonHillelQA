@@ -6,12 +6,10 @@ class VacuumCleaner(ABC):
                  model_name: str,
                  power: float,
                  battery_capacity: float,
-                 remaining_work_time: float
                  ):
         self._model_name = model_name
         self._power = power
         self._battery_capacity = battery_capacity
-        self._remaining_work_time = remaining_work_time
 
     @abstractmethod
     def vacuum(self, minutes: int):

@@ -7,18 +7,16 @@ class PhilipsCleaner(VacuumCleaner):
                  power: float,
                  battery_capacity: float
                  ):
-        self.__remaining_work_time = None
         super().__init__(
             model_name,
             power,
-            battery_capacity,
-            self.__remaining_work_time
+            battery_capacity
         )
-        self.__remaining_work_time = None
-        print(model_name, power, battery_capacity, self.__remaining_work_time)
+        self.__remaining_work_hour = None
+        print(model_name, power, battery_capacity, self.__remaining_work_hour)
 
     def _updated_remaining_work_time(self):
-        self.__remaining_work_time = (11 * self._battery_capacity) / self._power
+        self.__remaining_work_hour = (11 * self._battery_capacity) / self._power
 
     def _update_batter_capacity(self, minutes):
         hours = minutes / 60
@@ -29,9 +27,9 @@ class PhilipsCleaner(VacuumCleaner):
     def vacuum(self, minutes: int):
         self._updated_remaining_work_time()
         print(f"I'm Philips. Checking battery status")
-        print(f"Remaining working time in minutes before clean: {self.__remaining_work_time * 60}")
+        print(f"Remaining working time in minutes before clean: {self.__remaining_work_hour * 60}")
 
-        if minutes >= self.__remaining_work_time * 60:
+        if minutes >= self.__remaining_work_hour * 60:
             raise Exception("Not possible to clean more than capacity")
         else:
             print("I start clean")
@@ -39,4 +37,4 @@ class PhilipsCleaner(VacuumCleaner):
             self._updated_remaining_work_time()
             print("I stopped clean")
 
-        print(f"Remaining working time in minutes after clean: {self.__remaining_work_time * 60}")
+        print(f"Remaining working time in minutes after clean: {self.__remaining_work_hour * 60}")
