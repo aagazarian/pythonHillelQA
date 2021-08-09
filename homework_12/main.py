@@ -1,7 +1,7 @@
-from homework_12.PhilipsCleaner import PhilipsCleaner
-from homework_12.XiaomiCleaner import XiaomiCleaner
+from ArpineAgazaryan.pythonHillelQA.homework_12.philips_cleaner import PhilipsCleaner
+from ArpineAgazaryan.pythonHillelQA.homework_12.xiaomi_cleaner import XiaomiCleaner
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     philips = PhilipsCleaner("Philips XC900", 450, 50)
     xiaomi = XiaomiCleaner("Xiaomi RDS231", 400, 40)
 

@@ -2,11 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class VacuumCleaner(ABC):
-    def __init__(self,
-                 model_name: str,
-                 power: float,
-                 battery_capacity: float,
-                 ):
+    def __init__(self, model_name: str, power: float, battery_capacity: float):
         self._model_name = model_name
         self._power = power
         self._battery_capacity = battery_capacity
