@@ -6,7 +6,7 @@ class CustomIterator:
         self.__sequence = sequence
         self.__set_current(start_index)
         self.__end_index = end_index
-        print(f"Try to iterate sequence: {sequence}, from index: {start_index}, to index: {end_index}")
+        print(f"Try to iterate sequence: {sequence}, from index: {start_index} to index: {end_index}")
 
     def __set_current(self, start_index):
         if start_index >= 0:
@@ -30,12 +30,12 @@ class CustomIterator:
 
 if __name__ == '__main__':
     in_list = [1, 2, 3, 4, 5, 6]
-    custom_iterator_more_length = CustomIterator(in_list, 0, 9)
+    custom_iterator_more_length = CustomIterator(in_list, 2, 9)
     iterator1 = iter(custom_iterator_more_length)
     for item in iterator1:
         print(item)
 
-    in_tuple = [-2, -1, 0, 1, 2, 3, 4]
+    in_tuple = (-2, -1, 0, 1, 2, 3, 4)
     custom_iterator_less0 = CustomIterator(in_tuple, -2, 2)
     iterator2 = iter(custom_iterator_less0)
     for item in iterator2:
