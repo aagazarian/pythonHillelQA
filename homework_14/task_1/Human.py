@@ -36,3 +36,4 @@ if __name__ == '__main__':
 
     for human in humans:
         print(f"name: {human.name}, age: {human.age}, action: {human.action()}")
+    # Nice it is the best solution for now from the group
