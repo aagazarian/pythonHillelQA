@@ -1,4 +1,4 @@
-from homework_13.task_2.train_car import TrainCar
+from .train_car import TrainCar
 
 
 class Train:
