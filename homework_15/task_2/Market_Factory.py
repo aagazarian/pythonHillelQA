@@ -26,3 +26,4 @@ if __name__ == '__main__':
     print(product_3.name)
     product_4 = MarketFactory.get_product("strawberry")
     print(product_4.name)
+    # name your module in snake case or camel case but not in both cases in same time
