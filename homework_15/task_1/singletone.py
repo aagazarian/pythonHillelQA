@@ -1,13 +1,17 @@
-class MainCashDesk:
-    __instance = None
+class SingleInstanceMetaClass(type):
+    def __init__(cls, name, balance, dic):
+        cls.__single_instance = None
+        super().__init__(name, balance, dic)
 
-    def __new__(cls, name, balance):
-        if cls.__instance is None:
-            cls.__instance = super().__new__(cls)
-            cls.__instance.__name = name
-            cls.__instance.__balance = balance
-        return cls.__instance
+    def __call__(cls, *args, **kwargs):
+        if cls.__single_instance is None:
+            single_obj = cls.__new__(cls)
+            single_obj.__init__(*args, **kwargs)
+            cls.__single_instance = single_obj
+        return cls.__single_instance
 
+
+class MainCashDesk(metaclass=SingleInstanceMetaClass):
     def __init__(self, name, balance):
         self.__name = name
         self.__balance = balance
