@@ -1,3 +1,5 @@
+import pytest
+
 from .human import Human
 
 
@@ -46,3 +48,16 @@ class TestHuman:
         except Exception as ex:
             assert ex.__str__() == "Bob is already dead..."
         assert self.human_101.age == 101
+        # Good but exception raises in method __is_alive so you should check it in another test.
+        # this test more like integration nether unit
+        # no try except in test should be
+
+    def test_is_alive_exception_unit_oriented(self, monkeypatch):
+        monkeypatch.setattr(
+            self.human_101,
+            "_Human__status",
+            "dead"
+        )
+        with pytest.raises(Exception) as error:
+            self.human_101._Human__is_alive()
+            assert error.value == f"{self.human_101._Human__name} already dead..."
