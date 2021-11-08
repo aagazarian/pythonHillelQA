@@ -1,0 +1,19 @@
+version: "3"
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: arpine
+      POSTGRES_PASSWORD: Password123
+      POSTGRES_DB: store
+    volumes:
+      - postgres-db-data:/var/lib/postgresql/data/
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  postgres-db-data:
